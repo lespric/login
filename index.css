@@ -26,7 +26,7 @@ header {
 } /* 由于在html的media标签里限制必须全屏显示，所以不用position:fixed固定在顶部 */
 .close,
 .register {
-  min-width: 44px;
+  min-width: 3em;
   font-size: 1.6em;
 }  /* min-width 保证点击尺寸至少44px */
 .register {
