@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Login Page</title>
+    <meta name="description" content="" />
+    <meta
+      name="viewport"
+      content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <header>
+      <span class="close">关闭</span>
+      <span class="tittle">登陆</span>
+      <span class="register">注册</span>
+    </header>
+
+    <main>
+      <form method="get" action="save.php" name="login page">
+        <div class="account">
+          <div class="icon">
+            <div class="img"></div>
+          </div>
+          <input
+            class="input"
+            type="text"
+            name="account"
+            textlength="11"
+            onKeyUp="value=value.replace(/[^\d]/g,'')"
+            onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"
+            palceholder="请输入手机号"
+            value=""
+            required
+          /> <!--手机号码输入框，只能输入纯数字且限制长度为11个字符，输入其他类型会自动删除-->
+        </div>
+        <div class="password">
+          <div class="icon">
+            <div class="img"></div>
+          </div>
+          <input
+            class="input"
+            type="password"
+            name="password"
+            palceholder="请输入密码"
+            value=""
+            required
+          />
+        </div>
+        <div class="login">
+          <input type="button" name="login" value="登陆" />
+        </div>
+        <div class="forget">
+          <a href="#" target="_blank">忘记密码?</a>
+        </div>
+      </form>
+    </main>
+
+    <script src="" async defer></script>
+  </body>
+</html>
