@@ -32,12 +32,10 @@
             class="input"
             type="text"
             name="account"
-            textlength="11"
-            onKeyUp="value=value.replace(/[^\d]/g,'')"
+            maxlength="11"
+            oninput="value=value.replace(/[^\d]/g,'')"
             onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"
-            palceholder="请输入手机号"
-            value=""
-            required
+            placeholder="请输入手机号"
           /> <!--手机号码输入框，只能输入纯数字且限制长度为11个字符，输入其他类型会自动删除-->
         </div>
         <div class="password">
@@ -48,9 +46,7 @@
             class="input"
             type="password"
             name="password"
-            palceholder="请输入密码"
-            value=""
-            required
+            placeholder="请输入密码"
           />
         </div>
         <div class="login">
