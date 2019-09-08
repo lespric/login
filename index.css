@@ -18,7 +18,6 @@ input:focus {
 
 header {
   display: flex;
-  justify-content: space-between;
 
   height: 4.4em;
   line-height: 4.4em;
