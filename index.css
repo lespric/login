@@ -14,7 +14,7 @@ input:focus {
   background: none;
   outline: none;
   border: none;
-} /* 去除输入框的默认样式 */
+} /* 去除全部输入框及按钮的默认样式 */
 
 header {
   display: flex;
@@ -93,7 +93,7 @@ header {
   }
 } /* 应用媒体查询，检测dpi情况，分别应用相应倍数的图 */
 
-.input {
+.import {
   margin-left: 1.6em;
   line-height: 1.5em;
 }
