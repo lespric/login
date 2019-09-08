@@ -17,13 +17,10 @@ input:focus {
 } /* 去除输入框的默认样式 */
 
 header {
-  padding: 0 1.6em;
-
   display: flex;
   justify-content: space-between;
 
   height: 4.4em;
-
   line-height: 4.4em;
   background-color: #5fc0cd;
 } /* 由于在html的media标签里限制必须全屏显示，所以不用position:fixed固定在顶部 */
@@ -35,7 +32,18 @@ header {
 .register {
   text-align: right;
 } /* 当“注册”的字体宽度小于44px，处于右端，来完成两端对齐 */
+
+.close {
+    position: absolute;
+    left: 1.6em;
+}
+.register {
+    position: absolute;
+    right: 1.6em;
+} /* “关闭”和“注册”两个文本按键，以绝对定位来代替margin值 */
 .tittle {
+  margin: 0 auto;
+
   font-size: 1.8em;
   font-weight: 500;
   letter-spacing: 0.2em;
