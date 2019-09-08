@@ -7,10 +7,18 @@
     <meta name="description" content="" />
     <meta
       name="viewport"
-      content="width=device-width,height=device-height,inital-scale=1.0,user-scalable=no"/><!--100%可视屏幕显示，不允许缩放-->
-    <meta name="apple-mobile-web-app-capable" content="yes" /><!--删除默认的苹果工具栏和菜单栏-->
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /><!--使状态栏为灰色半透明-->
-    <meta name="format-detection" content="telephone=no" /><!--电话号码和邮箱不会显示为如拨号的超链接-->
+      content="width=device-width,height=device-height,inital-scale=1.0,user-scalable=no"
+    />
+    <!--100%可视屏幕显示，不允许缩放-->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!--删除默认的苹果工具栏和菜单栏-->
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <!--使状态栏为灰色半透明-->
+    <meta name="format-detection" content="telephone=no" />
+    <!--电话号码和邮箱不会显示为如拨号的超链接-->
     <link rel="stylesheet" href="index.css" />
   </head>
 
@@ -22,7 +30,7 @@
     </header>
 
     <main>
-      <form method="get" action="save.php" name="login page"> 
+      <form method="get" action="save.php" name="login page">
         <!--表单提交的内容要在form里面，且包含的input必须有name属性值才能提交，传达方式一般为get，数据量较小-->
         <div class="account">
           <div class="icon">
@@ -34,9 +42,9 @@
             name="account"
             maxlength="11"
             oninput="value=value.replace(/[^\d]/g,'')"
-            onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"
             placeholder="请输入手机号"
-          /> <!--手机号码输入框，只能输入纯数字且限制长度为11个字符，输入其他类型会自动删除并退回-->
+          />
+          <!--手机号码输入框，只能输入纯数字且限制长度为11个字符-->
         </div>
         <div class="password">
           <div class="icon">
