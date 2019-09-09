@@ -32,9 +32,9 @@
     <main>
       <form method="post" action="save.php" name="login page">
         <!--表单提交的内容要在form里面，且包含的input必须有name属性值才能提交，传达方式一般为get，数据量较小-->
-        <div class="account">
+        <article class="account">
           <div class="icon">
-            <div class="img"></div>
+            <p class="img"></p>
           </div>
           <input
             class="import"
@@ -49,12 +49,12 @@
           <div class="clear">
             <button type="reset" name="reset" value=""></button><!--清空按键-->
           </div>
-        </div>
+        </article>
         <!--把两个输入框分在两个form，从而reset按钮只清空对应的输入框内容-->
 
-        <div class="password">
+        <article class="password">
           <div class="icon">
-            <div class="img"></div>
+            <p class="img"></p>
           </div>
           <input
             class="import"
@@ -67,16 +67,16 @@
           <div class="clear">
             <button type="reset" name="reset" value=""></button><!--清空按键-->
           </div>
-        </div>
+        </article>
 
-        <div class="login">
+        <article class="login">
           <button type="submit" name="login" value="登录">登录</button>
-        </div>
+        </article>
       </form>
 
-      <div class="forget">
+      <aside class="forget">
         <a href="#" target="_blank">忘记密码?</a>
-      </div>
+      </aside>
     </main>
 
     <script src="" async defer></script>
