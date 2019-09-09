@@ -1,3 +1,34 @@
+@media all and (orientation: portrait) {
+  @media (min-width: 980px) {
+    html {
+      font-size: 2rem;
+    }
+  } /* 竖屏电脑 */
+  @media (min-width: 768px) and (max-width: 979px) {
+    html {
+      font-size: 1.5rem;
+    }
+  } /* 竖屏平板 */
+  @media (max-width: 767px) {
+    html {
+      font-size: 1rem;
+    }
+  } /* 竖屏手机 */
+}
+
+@media all and (orientation: landscape) {
+  @media (min-width: 1024px) {
+    html {
+      font-size: 2rem;
+    }
+  } /*横屏网页 */
+  @media (max-width: 1023px) {
+    html {
+      font-size: 1rem;
+    }
+  }
+} /* 横屏手机 */
+
 body {
   margin: 0;
   padding: 0;
@@ -121,8 +152,9 @@ main {
 } /* 应用媒体查询，检测dpi情况，分别应用相应倍数的图 */
 
 .import {
-  margin-left: 1.6em;
-  line-height: 1.5em;
+  margin-left: 1em;
+  height: 2em;
+  font-size: 1.6em;
 }
 .import::-webkit-input-placeholder {
   color: #e1e5e7;
