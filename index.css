@@ -17,12 +17,15 @@ input:focus {
 } /* 去除全部输入框及按钮的默认样式 */
 
 header {
+  position: fixed;
+  top: 0;
   display: flex;
-
+  
+  width: 100%;
   height: 4.4em;
   line-height: 4.4em;
   background-color: #5fc0cd;
-} /* 由于在html的media标签里限制必须全屏显示，所以不用position:fixed固定在顶部 */
+} /* 用position:fixed和top:0来固定在顶部，再加flex布局，变为弹性层模型 */
 .close,
 .register {
   min-width: 3em;
@@ -48,6 +51,9 @@ header {
   letter-spacing: 0.2em;
 } /* 特别改变页面标题的字体类型，和居中位置 */
 
+main {
+    margin-top: 5.2em;
+}
 .account,
 .password {
   margin-top: 0.8em;
