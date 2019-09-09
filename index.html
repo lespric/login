@@ -33,9 +33,9 @@
       <form method="post" action="save.php" name="login page">
         <!--表单提交的内容要在form里面，且包含的input必须有name属性值才能提交，传达方式一般为get，数据量较小-->
         <article class="account">
-          <div class="icon">
+          <section class="icon">
             <p class="img"></p>
-          </div>
+          </section>
           <input
             class="import"
             type="text"
@@ -46,16 +46,17 @@
             required
           />
           <!--手机号码输入框，只能输入纯数字且限制长度为11个字符-->
-          <div class="clear">
-            <button type="reset" name="reset" value=""></button><!--清空按键-->
-          </div>
+          <section class="clear">
+            <button type="reset" name="reset" value=""></button
+            ><!--清空按键-->
+          </section>
         </article>
         <!--把两个输入框分在两个form，从而reset按钮只清空对应的输入框内容-->
 
         <article class="password">
-          <div class="icon">
+          <section class="icon">
             <p class="img"></p>
-          </div>
+          </section>
           <input
             class="import"
             type="password"
@@ -64,9 +65,10 @@
             required
           />
           <!--required规定必需在提交之前填写输入字段-->
-          <div class="clear">
-            <button type="reset" name="reset" value=""></button><!--清空按键-->
-          </div>
+          <section class="clear">
+            <button type="reset" name="reset" value=""></button
+            ><!--清空按键-->
+          </section>
         </article>
 
         <article class="login">
