@@ -20,7 +20,7 @@ header {
   position: fixed;
   top: 0;
   display: flex;
-  
+
   width: 100%;
   height: 4.4em;
   line-height: 4.4em;
@@ -28,20 +28,20 @@ header {
 } /* 用position:fixed和top:0来固定在顶部，再加flex布局，变为弹性层模型 */
 .close,
 .register {
-  min-width: 3em;
+  min-width: 1.5em;
   font-size: 1.6em;
-}  /* min-width 保证点击尺寸至少44px */
+} /* min-width 保证点击区域至少44px */
 .register {
   text-align: right;
-} /* 当“注册”的字体宽度小于44px，处于右端，来完成两端对齐 */
+} /* 当“注册”的字体宽度低于44px，处于右端，来完成两端对齐 */
 
 .close {
-    position: absolute;
-    left: 1em;
+  position: absolute;
+  left: 1em;
 }
 .register {
-    position: absolute;
-    right: 1em;
+  position: absolute;
+  right: 1em;
 } /* “关闭”和“注册”两个文本按键，以绝对定位来代替margin值 */
 .tittle {
   margin: 0 auto;
@@ -52,8 +52,8 @@ header {
 } /* 特别改变页面标题的字体类型，和居中位置 */
 
 main {
-    margin-top: 5.2em;
-}
+  margin-top: 5.2em;
+} /* 主体内容布局 */
 .account,
 .password {
   margin-top: 0.8em;
@@ -66,25 +66,43 @@ main {
   line-height: 5em;
   background-color: #ffffff;
 } /* 应用flex布局，使icon和input的盒模型从左到右垂直居中排列 */
-
 .icon {
   width: 5.8em;
   height: 2.6em;
 
   border-right: 0.1em solid #e1e5e7;
-} /* 定义分隔线的尺寸和位置 */
+}
+.clear {
+  display: flex;
+
+  width: 4.4em;
+  height: 4.4em;
+} /* 定义分隔线的尺寸和位置，以及清除按钮的尺寸和位置 */
+
+.clear input {
+  margin: auto auto;
+  font-size: 3em;
+
+  width: 0.4em;
+  height: 0.4em;
+}
 .img {
   margin: auto auto;
 
   width: 1.6em;
   height: 2.4em;
-} /* 定义icon的图像的大小和中心位置 */
+} /* 定义icon和clear的图像的大小和中心位置 */
+
 .account .img {
   background: url(../login/img/iphone@2x.png) no-repeat;
   background-size: cover;
 }
 .password .img {
   background: url(../login/img/locked@2x.png) no-repeat;
+  background-size: cover;
+}
+.clear input {
+  background: url(../login/img/reset@2x.png) no-repeat;
   background-size: cover;
 }
 @media screen and (-webkit-device-pixel-ratio: 3) {
@@ -96,24 +114,39 @@ main {
     background: url(../login/img/locked@3x.png) no-repeat;
     background-size: cover;
   }
+  .clear input {
+    background: url(../login/img/reset@3x.png) no-repeat;
+    background-size: cover;
+  }
 } /* 应用媒体查询，检测dpi情况，分别应用相应倍数的图 */
 
 .import {
   margin-left: 1.6em;
   line-height: 1.5em;
 }
-input::-webkit-input-placeholder {
+.import::-webkit-input-placeholder {
   color: #e1e5e7;
 }
-input:-moz-placeholder {
+.import:-moz-placeholder {
   color: #e1e5e7;
 }
-input::-moz-placeholder {
+.import::-moz-placeholder {
   color: #e1e5e7;
 }
-input:-ms-input-placeholder {
+.import:-ms-input-placeholder {
   color: #e1e5e7;
 } /* 定义输入框的输入内容的字体大小，以及其默认文本的颜色 */
+
+.clear {
+  display: none;
+}
+.account input:valid + .clear {
+  display: flex;
+}
+.password input:valid + .clear {
+  display: flex;
+} /* clear按钮平时隐藏，输入框要增加required验证属性，即有输入内容，输入框才合法，才会触发:valid的伪类选择器，
+  生效的样式为 + 号后面的CSS样式，从而实现有输入内容，clear按钮显示出来；*/
 
 .login {
   margin-top: 3.6em;
@@ -142,9 +175,9 @@ input:-ms-input-placeholder {
 .forget a {
   text-decoration: none;
   outline: none;
-  
-  min-height: 3em;
+
+  min-height: 1.5em;
   font-size: 1.6em;
   letter-spacing: 0.05em;
   color: #5fc0cd;
-} /* 清除a的默认样式，定义其字体类型及大小，且min-height 保证点击尺寸至少44px */
+} /* 清除a的默认样式，定义其字体类型及大小，且min-height 保证点击区域至少44px */
