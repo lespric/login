@@ -41,6 +41,7 @@ body {
   color: #ffffff;
 } /* 确定全局属性：字体大小、字族、字重等 */
 input,
+button,
 input:focus {
   background: none;
   outline: none;
@@ -108,9 +109,9 @@ main {
 
   width: 4.4em;
   height: 4.4em;
-} /* 定义分隔线的尺寸和位置，以及清除按钮的尺寸和位置 */
+} /* 定义分隔线的尺寸和位置，以及清除按钮的盒模型尺寸和位置 */
 
-.clear input {
+.clear button {
   margin: auto auto;
   font-size: 3em;
 
@@ -132,7 +133,7 @@ main {
   background: url(../login/img/locked@2x.png) no-repeat;
   background-size: cover;
 }
-.clear input {
+.clear button {
   background: url(../login/img/reset@2x.png) no-repeat;
   background-size: cover;
 }
@@ -187,7 +188,7 @@ main {
   height: 5em;
   background-color: #5fc0cd;
 } /* 定义登录按钮的包含块的大小、位置和背景颜色，因包含块的em值为10px，方便换算 */
-.login input {
+.login button {
   width: 100%;
   height: 100%;
 
