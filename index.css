@@ -197,6 +197,10 @@ main {
   letter-spacing: 0.5em;
   color: #ffffff;
 } /* 定义登录按钮的字体类型，及按钮的大小，因字体大小改变，按钮大小不好换算 */
+.login:active {
+    background-color: #5fc0cd;
+    opacity: 0.5;
+} /* 定义鼠标点击时，按钮处于点击状态的样式 */
 
 .forget {
   display: flex;
