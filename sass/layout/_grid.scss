@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+
+@import 
+  "grid-mixins";
+  // 引用同目录下的混合宏文件
+@import 
+  "../abstracts/mixins",
+  "../abstracts/variables";
+  // 引用abstracts目录下的变量和混合宏文件
+
+$col-numb: 12!default;
+// 声明栅格系统的总列数
+
+.row-no-gutters {
+  @include row;
+  margin-right: 0;
+  margin-left: 0;
+}
+// 定义行的布局
+
+%col {
+  position: relative;
+  width: 100%;
+} // 声明col通用样式的占位符
+@for $i from 1 through $col-numb {
+  @each $bp-key in $bp-keys-list {
+    .col {
+      &,
+      &-#{$i},
+      &-auto,
+      &-#{$bp-key}-#{$i} {
+        @extend %col;
+      }
+    }
+  }
+}
+// 定义所有类型的col的宽度
+
+.col {
+  & {
+    @include col-bp;
+  }
+
+  &-auto {
+    @include col-auto;
+  }
+}
+// 定义在所有分辨率下的无后缀及auto时的自动布局
+
+@for $i from 1 through $col-numb {
+  .col-#{$i} {
+    $max-width: ($i / $col-numb) * 100%;
+    -ms-flex: 0 0 $max-width;
+    flex: 0 0 $max-width;
+    max-width: $max-width;
+  }
+}
+// 定义在所有分辨率下共用的栅格系统
+
+@each $bp-key in $bp-keys-list {
+  @include respond-to($bp-key) {
+    .col {
+      &-#{$bp-key} {
+        @include col-bp;
+      }
+      &-#{$bp-key}-auto {
+        @include col-auto;
+      }
+      @for $i from 1 through $col-numb {
+        &-#{$bp-key}-#{$i} {
+          $max-width: ($i / $col-numb) * 100%;
+          -ms-flex: 0 0 $max-width;
+          flex: 0 0 $max-width;
+          max-width: $max-width;
+        }
+      }
+    }
+  }
+}
+// 定义在各个分辨率下各自的栅格系统

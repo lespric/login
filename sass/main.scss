@@ -1,0 +1,46 @@
+@charset "utf-8";
+// 每个scss文件都要在首行加上，否则中文会编译出错
+
+/*!
+sass/
+|
+|– abstracts/
+|   |– _variables.scss    # Sass Variables
+|   |– _mixins.scss       # Sass Mixins
+|
+|– base/
+|   |– _reset.scss        # Reset/normalize
+|   |– _typography.scss   # Typography rules
+|   |– _colors.scss       # colors type
+|
+|– components/
+|   |– _buttons.scss      # Buttons
+|   |– _form-input.scss   # Form-input
+|
+|– layout/
+|   |– _grid.scss         # Grid system
+|   |– _header.scss       # Header
+|   |– _footer.scss       # Footer
+|   |– _forms.scss        # Forms
+|
+`– main.scss              # Main Sass file
+*/
+
+@import
+  "abstracts/mixins",
+  "abstracts/variables";
+
+@import
+  "base/reset",
+  "base/typography",
+  "base/colors";
+
+@import
+  "layout/grid",
+  "layout/header",
+  "layout/forms",
+  "layout/footer";
+
+@import
+  "components/buttons",
+  "components/form-input";

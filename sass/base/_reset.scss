@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+@import "colors";
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: $color-bg;
+}
+// 去除浏览器的默认样式
+
+input,
+button,
+input:focus {
+  background: none;
+  outline: none;
+  border: none;
+} 
+// 去除全部输入框及按钮的默认样式
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+// 去除全部链接的默认样式

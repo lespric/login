@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+@import
+  "../abstracts/variables",
+  "../abstracts/mixins";
+
+:root {
+    font-family: "Microsoft YaHei", sans-serif;
+}
+// 定义根文字字族和大小
+
+@each $font-bp in $bp-keys-list {
+    body {
+        @include respond-to($font-bp) {
+            $i: index($bp-keys-list, $font-bp);
+            font-size: 0.625rem * 0.5 * ($i + 1);
+        }
+    }
+} 
+// 定义body标签在不同断点下的字体大小
+
+.header {
+  color: #FFF;
+  &-title-font {
+    font-size: 1.8em;
+    text-align: center;
+  }
+  &-btn-font {
+    font-size: 1.6em;
+    color: #FFF;
+  }
+}
+// 定义导航栏的字体大小和颜色
+
+.form-input-font {
+    font-size: 1.6em;
+}
+// 定义表格的输入框的字体大小和颜色
+.form-input-font::-webkit-input-placeholder {
+  color: #e1e5e7;
+}
+.form-input-font:-moz-placeholder {
+  color: #e1e5e7;
+}
+.form-input-font::-moz-placeholder {
+  color: #e1e5e7;
+}
+.form-input-font:-ms-input-placeholder {
+  color: #e1e5e7;
+}
+// 定义输入框的提示文本颜色
+
+
+.footer-btn-font {
+  @extend .header-title-font;
+  color: #F3F4F6;
+}
+// 定义底部的按钮文字大小和颜色
+
+.footer-a-font {
+  @extend .form-input-font;
+  color: #5FC0CD;
+}
+// 定义底部的链接文字大小和颜色
+
+
